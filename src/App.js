@@ -22,22 +22,24 @@ function App() {
 
   return (
     <div className="app">
-      <main>
-        <div className='search-box'>
-          <input
-            type="text"
-            className='search-bar'
-            placeholder='Suchen...' />
+      <div className="weather-app">
+        <div className='weather'>
+          <div className='search-box'>
+            <input
+              type="text"
+              className='search-bar'
+              placeholder='Suchen...' />
+          </div>
+
+          <div className='temp'>-3 Grad</div>
+
+          <div className='location'>Berlin</div>
+
+          <div className='date'>{dateBuilder(new Date())}</div>
+
+          <div className='weather-grad'></div>
         </div>
-
-        <div className='temp'>-3 Grad</div>
-
-        <div className='location'>Berlin</div>
-
-        <div className='date'>{dateBuilder(new Date())}</div>
-
-        <div className='weather'></div>
-      </main>
+      </div>
     </div>
   );
 }

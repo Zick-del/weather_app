@@ -3,20 +3,40 @@
   padding: 0;
   box-sizing: border-box;
 }
-.app {
-  transition: 0.4 ease-out;
+
+.weather.sunny {
+  background-image: url('./assests/sunny.jpg');
+}
+.weather.cold {
+  background-image: url('./assests/freezing.jpg');
+}
+.weather.cloudy {
+  background-image: url(./assests/cloudy.jpg);
+}
+.weather.snowy {
+  background-image: url('./assests/snowy.jpg');
 }
 
-main {
+.weather {
   min-height: 100vh;
   width: 350px;
-  background-color: aqua;
   padding: 25px;
+  
+  background: linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url("./assests/windy.jpg"); 
+  
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4 ease-out;
+  border-radius: 40px;
+  border: #FFFF 5px solid;
 }
+
+
 
 .search-box {
   width: 100%;
   margin: 0 0 20px;
+  
 }
 
 .search-box .search-bar {
