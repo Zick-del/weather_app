@@ -4,39 +4,74 @@
   box-sizing: border-box;
 }
 
-.weather.sunny {
-  background-image: url('./assests/sunny.jpg');
+.main.sunny {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url("./assests/sunny.jpg");
+
+  background-size: cover;
+  background-position: bottom;
 }
-.weather.cold {
-  background-image: url('./assests/freezing.jpg');
+.main.cold {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url("./assests/freezing.jpg");
+
+  background-size: cover;
+  background-position: bottom;
 }
-.weather.cloudy {
-  background-image: url(./assests/cloudy.jpg);
+.main.clouds {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url(./assests/cloudy.jpg);
+
+  background-size: cover;
+  background-position: bottom;
 }
-.weather.snowy {
-  background-image: url('./assests/snowy.jpg');
+.main.snow {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url("./assests/snowy.jpg");
+
+  background-size: cover;
+  background-position: bottom;
 }
 
-.weather {
+.main.windy {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url("./assests/windy.jpg");
+
+  background-size: cover;
+  background-position: bottom;
+}
+
+.main {
   min-height: 100vh;
   width: 350px;
   padding: 25px;
-  
-  background: linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url("./assests/windy.jpg"); 
-  
+  font-family: "Montserrat", sans-serif;
+
   background-size: cover;
   background-position: bottom;
   transition: 0.4 ease-out;
   border-radius: 40px;
-  border: #FFFF 5px solid;
+  border: #ffff 5px solid;
 }
-
-
 
 .search-box {
   width: 100%;
   margin: 0 0 20px;
-  
 }
 
 .search-box .search-bar {
@@ -54,10 +89,59 @@
   box-shadow: 0 3px rgba(0, 0, 0, 0.2);
 
   font-size: 18px;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .search-box .search-bar:focus {
   background-color: rgba(255, 255, 255, 0.8);
   transition: ease 0.4s;
+}
+
+.location-box {
+  padding: 30px;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.location-box .location {
+  color: rgba(49, 39, 39, 0.9);
+  text-align: center;
+  font-size: 33px;
+  font-weight: 700;
+
+  text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+}
+
+.location-box .date {
+  color: rgb(49, 49, 39, 0.9);
+  text-align: center;
+  font-size: 18px;
+  text-shadow: 1px 1px rgba(50, 50, 70, 0.5);
+  font-style: italic;
+}
+
+.weather-box {
+  text-align: center;
+}
+
+.weather-box .temp {
+  position: relative;
+  display: inline-block;
+  margin: 30px;
+  font-size: 33px;
+  background-color: rgba(255, 255, 255, 0.5);
+
+  padding: 25px 25px;
+
+  border-radius: 15px;
+}
+
+.weather-box .weather {
+  font-size: 33px;
+  color: rgba(49, 39, 39, 0.9);
+  text-align: center;
+  font-size: 33px;
+  font-weight: 700;
+  font-style: italic;
+
+  text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
 }
