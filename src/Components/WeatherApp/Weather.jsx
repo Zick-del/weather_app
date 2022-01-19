@@ -19,7 +19,7 @@ const dateBuilder = (d) => {
   return `${day}, ${date}. ${month} ${year}`;
 };
 
-const WeatherApp = () => {
+const WeatherApp = ({ setCountryCode }) => {
 
   const [query, setQuery] = useState('')
   const [weather, setWeather] = useState({})
@@ -29,21 +29,21 @@ const WeatherApp = () => {
       fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
         .then(res => res.json())
         .then(result => {
+          setCountryCode(result.sys.country)
           setQuery('')
           setWeather(result)
+
 
         })
     }
 
   }
 
-  
-
   return (
     <div className="weather-app">
-      <div className={(typeof weather.main != "undefined") 
-    ? `main ${weather.weather[0].main}`.toLowerCase() 
-    : 'main'}>
+      <div style={boxStyle} className={(typeof weather.main != "undefined")
+        ? `main ${weather.weather[0].main}`.toLowerCase()
+        : 'main'}>
         <div className="search-box">
           <input
             type="text"
