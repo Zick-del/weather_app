@@ -41,7 +41,7 @@ const WeatherApp = ({ setCountryCode }) => {
 
   return (
     <div className="weather-app">
-      <div style={boxStyle} className={(typeof weather.main != "undefined")
+      <div className={(typeof weather.main != "undefined")
         ? `main ${weather.weather[0].main}`.toLowerCase()
         : 'main'}>
         <div className="search-box">
