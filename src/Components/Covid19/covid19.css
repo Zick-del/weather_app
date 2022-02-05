@@ -11,7 +11,6 @@
 
 .container {
     display: grid;
-    grid-gap: 10px 10px;
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -26,6 +25,7 @@
     font-family: 'Righteous', cursive;
     font-size: 28px;
     padding-top: 15vh;
+    margin: 30px;
     animation: myAnim 1s ease 0s 1 normal forwards;
 }
 @keyframes myAnim {

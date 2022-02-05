@@ -7,8 +7,8 @@ const api = {
 };
 
 
-const days = ["Sonntag", "Montag", "Dieanstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag",];
-const months = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"];
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "Oktober", "November", "December"];
 
 const dateBuilder = (d) => {
   let day = days[d.getDay()];
@@ -32,8 +32,6 @@ const WeatherApp = ({ setCountryCode }) => {
           setCountryCode(result.sys.country)
           setQuery('')
           setWeather(result)
-
-
         })
     }
 
@@ -48,7 +46,7 @@ const WeatherApp = ({ setCountryCode }) => {
           <input
             type="text"
             className="search-bar"
-            placeholder="Suchen..."
+            placeholder="Search..."
             onChange={e => setQuery(e.target.value)}
             value={query}
             onKeyPress={search} />

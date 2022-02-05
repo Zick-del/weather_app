@@ -13,7 +13,7 @@ const Covid19 = ({ countryCode }) => {
             .then(result => {
                 const country = result.Countries.filter(c => c.CountryCode.includes(countryCode));
                 setCountryData(country)
-                console.log(result)
+                console.log(country)
             })
     }, [countryCode])
 
