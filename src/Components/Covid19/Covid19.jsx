@@ -29,23 +29,25 @@ const Covid19 = ({ countryCode }) => {
 
         countryData && countryData.length ? <div className="main-box">
             <div className="container">
-                <h1 style={{ textTransform: 'uppercase', fontSize: '40px' }} className="item item-country">{countryData[0].Country}</h1>
+                <h1 
+                    className="item item-country">{countryData[0].Country}
+                </h1>
 
                 <div className="item item-confirmed">
                     <div className="new-grid">
-                        <span style={{ color: '#fff' }}>{formatNumbers(countryData[0].NewConfirmed)}</span>
+                        <span style={{ color: '#e42a1d' }}>{formatNumbers(countryData[0].NewConfirmed)}</span>
                         <br />New confirmed
                     </div>
-                    <div className="total-grid"><span style={{ color: '#fff' }}>{formatNumbers(countryData[0].TotalConfirmed)}</span>
+                    <div className="total-grid"><span style={{ color: '#000000' }}>{formatNumbers(countryData[0].TotalConfirmed)}</span>
                         <br />Total confirmed
                     </div>
                 </div>
 
                 <div className="item item-deaths">
-                    <div className="new-grid"><span style={{ color: '#fff' }}>{formatNumbers(countryData[0].NewDeaths)}</span>
+                    <div className="new-grid"><span style={{ color: '#e42a1d' }}>{formatNumbers(countryData[0].NewDeaths)}</span>
                         <br />New deaths
                     </div>
-                    <div className="total-grid"><span style={{ color: '#fff' }}>{formatNumbers(countryData[0].TotalDeaths)}</span>
+                    <div className="total-grid"><span style={{ color: '#000000' }}>{formatNumbers(countryData[0].TotalDeaths)}</span>
                         <br />Total deaths
                     </div>
                 </div>

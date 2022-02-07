@@ -1,120 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Righteous&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.landing {
-    position: absolute;
-    width: 100vh;
-    top: 35vh;
-    left: 80vh;
-    font-family: 'Righteous', cursive;
-    font-size: 30px;
-    z-index: -10;
+
+.weather-app {
+    min-height: 93vh;
+    margin: 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, .3);
+    height: 93vh;
+    
 }
 .app {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
 }
-/* 
-.weather-app {
-    background: linear-gradient(to bottom, rgba(255, 244, 193, 0.8), rgba(190, 182, 108, 0.7))
+.main.sunny {
+    background-color: #ef8354;
+}
+/* .main.dust, .main.fog, .main.smoke, .main.clouds, .main.snow {
+    background-color: #bfc0c0;
 } */
 
-.main.sunny {
-    background: linear-gradient( rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4)), url("./assests/sunny.jpg");
-    background-size: cover;
-    background-position: bottom;
+.main.dust, .main.fog, .main.smoke, .main.clouds, .main.snow {
+    background-color: #ffffff;
 }
-
+.main.rain, .main.drizzle, .main.mist, .main.cold, .main.windy {
+    background-color: #4F5D75;
+}
+.main.tornado, .main.thunderstorm {
+    background-color: #2d3142;
+}
 .main.clear {
-    background: linear-gradient( rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4)), url("./assests/clear.jpg");
-    background-size: cover;
-    background-position: bottom;
-}
-
-.main.dust {
-    background: linear-gradient( rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4)), url("./assests/dust.jpg");
-    background-size: cover;
-    background-position: bottom;
-}
-
-.main.fog {
-    background: linear-gradient( rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4)), url("./assests/fog.jpg");
-    background-size: cover;
-    background-position: bottom;
-}
-
-.main.rain {
-    background: linear-gradient( rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4)), url("./assests/rain.jpg");
-    background-size: cover;
-    background-position: bottom;
-}
-
-.main.drizzle {
-    background: linear-gradient( rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4)), url("./assests/drizzle.jpg");
-    background-size: cover;
-    background-position: bottom;
-}
-
-.main.mist {
-    background: linear-gradient( rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4)), url("./assests/mist.jpg");
-    background-size: cover;
-    background-position: bottom;
-}
-
-.main.smoke {
-    background: linear-gradient( rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4)), url("./assests/smoke.jpg");
-    background-size: cover;
-    background-position: bottom;
-}
-
-.main.tornado {
-    background: linear-gradient( rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4)), url("./assests/tornado.jpg");
-    background-size: cover;
-    background-position: bottom;
-}
-
-.main.thunderstorm {
-    background: linear-gradient( rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4)), url("./assests/thunderstorm.jpg");
-    background-size: cover;
-    background-position: bottom;
-}
-
-.main.cold {
-    background: linear-gradient( rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4)), url("./assests/freezing.jpg");
-    background-size: cover;
-    background-position: bottom;
-}
-
-.main.clouds {
-    background: linear-gradient( rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4)), url("./assests/clouds.jpg");
-    background-size: cover;
-    background-position: bottom;
-}
-
-.main.snow {
-    background: linear-gradient( rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4)), url("./assests/snow.jpg");
-    background-size: cover;
-    background-position: bottom;
-}
-
-.main.windy {
-    background: linear-gradient( rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4)), url("./assests/windy.jpg");
-    background-size: cover;
-    background-position: bottom;
+    background-color: #ffffff;
 }
 
 .main {
     min-height: 100vh;
-    width: 350px;
+    width: 25vw;
     padding: 25px;
-    font-family: 'Righteous', cursive;
-    background-size: cover;
-    background-position: bottom;
-    transition: 0.4 ease-out;
-    border: #ffff 3px solid;
+    background-color: #ffffff;
 }
 
 .search-box {
@@ -131,50 +56,45 @@
     background: none;
     outline: none;
     background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 15px;
-    box-shadow: 0 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, .3);
     font-size: 18px;
 }
 
 .search-box .search-bar:focus {
-    background-color: rgba(255, 255, 255, 0.8);
-    transition: ease 0.4s;
+    background-color: rgba(247, 247, 247, 0.8);
+    transition: all ease 0.4s;
 }
 
 .location-box {
-    padding: 30px;
-    border-radius: 16px;
-    background-color: rgba(255, 255, 255, 0.5);
+    padding: 30px 0;
+    text-align: right;
 }
 
 .location-box .location {
     color: rgba(49, 39, 39, 0.9);
-    text-align: center;
     font-size: 33px;
     font-weight: 700;
-    text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
 }
 
 .location-box .date {
     color: rgb(49, 49, 39, 0.9);
-    text-align: center;
+    text-align: right;
     font-size: 18px;
-    text-shadow: 1px 1px rgba(50, 50, 70, 0.5);
     font-style: italic;
 }
 
 .weather-box {
-    text-align: center;
+    text-align: right;
+    
 }
 
 .weather-box .temp {
     position: relative;
     display: inline-block;
-    margin: 30px;
-    font-size: 33px;
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 25px 25px;
-    border-radius: 15px;
+    font-size: 75px;
+    padding: 25px 0;
+    text-align: right;
+    color: rgb(49, 49, 39, 0.9);
 }
 
 .weather-box .weather {
@@ -184,5 +104,5 @@
     font-size: 33px;
     font-weight: 700;
     font-style: italic;
-    text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+    text-align: right;
 }

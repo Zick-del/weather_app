@@ -1,32 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    font-size: 28px;
 
-.main-box {
-    width: 100%;
-    background: linear-gradient(to bottom, rgba(168, 168, 168, 0.8), rgba(31, 31, 31, 0.7)), url('../../assests/covid.jpg');
-    background-size: cover;
-    background-position: bottom;
-    border-top: #ffff 3px solid;
-    border-bottom: #ffff 3px solid;
+    font-family: 'Roboto', sans-serif;
 }
 
 .container {
     display: grid;
     justify-content: center;
-    align-items: center;
     height: 100%;
-    text-align: center;
-
 }
 .container .item {
-    background-color: #8a1519;
-    height: 40vh;
-    width: 30vw;
-    color: #DFBF84;
-    font-family: 'Righteous', cursive;
-    font-size: 28px;
-    padding-top: 15vh;
+    padding: 20px;
     margin: 30px;
+    text-align: center;
+    /* background-color: #ffffff; */
+    height: 300px;
+    width: 450px;
+    color: rgb(49, 49, 39, 0.9);
+    font-size: 28px;
     animation: myAnim 1s ease 0s 1 normal forwards;
+
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, .3);
+
 }
 @keyframes myAnim {
     0% {
@@ -38,47 +34,56 @@
     }
   }
 .container .item-country {
+    position: relative;
     grid-column-start: 1;
     grid-column-end: 2;
-    color: #fff;
-    padding-left: 20px;
-    padding-right: 20px;
+    color: rgb(49, 49, 39, 0.9);
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 33px;
+    padding: 100px 0 0 0;
 }
 
 .container .item-confirmed {
     grid-column-start: 2;
     grid-column-end: 3;
+    
+
 }
 
 .container span {
-    color: #fff;
+    color: rgb(49, 49, 39, 0.9);
 }
 
 .no-data {
     width: 100%;
-    padding-top: 35vh;
-    padding-left: 30vh;
-    /* top: 35vh;
-    left: 80vh; */
-    font-family: 'Righteous', cursive;
+    margin: 50vh 0 auto 50vh;
     font-size: 30px;
-    color: #fff;
-
-    background-color: #8a1519;
+    color: rgb(49, 49, 39, 0.9);
+    font-size: 18px;
+    font-style: italic;
+    background-color: #ffffff;
 }
 
 .item-confirmed,  .item-deaths{
     display: grid;
+
+    background-color: rgba(247, 247, 247, 0.8);
 }
 
 .new-grid {
     grid-column-start: 1;
     grid-column-end: 2;
-    margin: -60px 0 0 10px;
+    margin: 40px auto auto 0;
 }
 
 .total-grid {
     grid-column-start: 2;
     grid-column-end: 3;
-    margin: 60px 10px 0 0;
+    margin: auto 0 40px auto;
+}
+
+.container .item-recovered {
+
+    padding: 100px 0 0 0;
 }

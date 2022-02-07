@@ -14,7 +14,6 @@ function App() {
     <div className="app" style={{ display: 'flex', flexDirection: 'row' }}>
       <WeatherApp setCountryCode={setCountryCode} />
       {countryCode && <Covid19 countryCode={countryCode} />}
-      <div className="landing">Enter the city and you will get some information</div>
     </div>
   );
 }
